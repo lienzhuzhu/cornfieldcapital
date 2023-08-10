@@ -1,0 +1,68 @@
+# Prerequisites
+*.d
+
+# Compiled Object files
+*.slo
+*.lo
+*.o
+*.obj
+
+# Precompiled Headers
+*.gch
+*.pch
+
+# Compiled Dynamic libraries
+*.so
+*.dylib
+*.dll
+
+# Fortran module files
+*.mod
+*.smod
+
+# Compiled Static libraries
+*.lai
+*.la
+*.a
+*.lib
+
+# Executables
+*.exe
+*.out
+*.app
+
+
+# Compiled Python files
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+
+# Python environment and dependency files
+venv/
+env/
+__env__/
+*.env
+*.egg-info/
+.idea/
+.vscode/
+
+# Local development settings
+settings.ini
+
+# Temporary files
+*.bak
+*.swp
+
+# Logs
+*.log
+logs/
+
+# User-specific files
+*.suo
+*.user
+*.sln.docstates
+
+# Jupyter Notebook metadata
+.ipynb_checkpoints/
+
