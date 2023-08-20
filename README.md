@@ -1,2 +1,2 @@
-# CornField Capital
-Financial practice
+# Cornfield Capital
+Financial simulations

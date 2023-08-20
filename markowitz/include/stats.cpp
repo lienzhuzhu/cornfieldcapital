@@ -3,7 +3,7 @@
 using namespace std;
 
 
-Eigen::MatrixXd compute_covariance_matrix(const vector<Asset>& assets) {
+Eigen::MatrixXd compute_covariance_matrix(vector<Asset>& assets) {
     int num_assets = assets.size();
     Eigen::MatrixXd covariance_matrix(num_assets, num_assets);
 
@@ -19,12 +19,15 @@ Eigen::MatrixXd compute_covariance_matrix(const vector<Asset>& assets) {
     return covariance_matrix;
 }
 
-double compute_covariance(const Asset& asset_1, const Asset& asset_2) {
-    const vector<double>& returns_1 = asset_1.get_returns();
-    const vector<double>& returns_2 = asset_2.get_returns();
+double compute_covariance(Asset& asset_1, Asset& asset_2) {
+    vector<double> returns_1 = asset_1.get_returns();
+    vector<double> returns_2 = asset_2.get_returns();
 
-    double mean_1 = asset_1.compute_expected_return();
-    double mean_2 = asset_2.compute_expected_return();
+    asset_1.compute_expected_return();
+    asset_2.compute_expected_return();
+
+    double mean_1 = asset_1.get_expected_return();
+    double mean_2 = asset_2.get_expected_return();
 
     double sum = 0.0;
     for (size_t t = 0; t < returns_1.size(); ++t) {

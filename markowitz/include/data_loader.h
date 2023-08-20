@@ -5,7 +5,7 @@
 #include <vector>
 
 
-std::vector<double> read_closing_prices_from_csv(const std::string& file_path);
+std::vector<double> read_closing_prices_from_csv(std::string& file_path);
 
 
 #endif // DATA_LOADER_H

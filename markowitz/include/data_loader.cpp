@@ -5,7 +5,7 @@
 
 using namespace std;
 
-vector<double> read_closing_prices_from_csv(const string& file_path) {
+vector<double> read_closing_prices_from_csv(string& file_path) {
     ifstream file(file_path);
     vector<double> closing_prices;
 
