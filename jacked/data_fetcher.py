@@ -5,7 +5,9 @@ import os
 if not os.path.exists('stock_data'):
     os.makedirs('stock_data')
 
-def fetch_data(tickers, start_date="2010-01-01", end_date="2020-12-31"):
+def fetch_data(ticker):
+    start_date="2010-01-01"
+    end_date="2020-12-31"
     data = {}
     
     for ticker in tickers:
